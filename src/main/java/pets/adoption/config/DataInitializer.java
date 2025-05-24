@@ -23,7 +23,7 @@ public class DataInitializer {
             if (!userRepository.existsByUsername("admin")) {
                 User admin = new User();
                 admin.setUsername("admin");
-                admin.setEmail("admin@example.com");
+                admin.setEmail("uconsta21@gmail.com");
                 admin.setPassword(passwordEncoder.encode("admin123")); // Change this in production
                 admin.setFullName("System Administrator");
                 admin.setRole("ADMIN");
