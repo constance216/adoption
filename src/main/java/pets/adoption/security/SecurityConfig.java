@@ -72,6 +72,7 @@ public class SecurityConfig {
             .authorizeHttpRequests(authz -> authz
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // Allow preflight requests
                 .requestMatchers("/api/auth/**", "/api/public/**").permitAll()
+                .requestMatchers("/reset-password").permitAll() // Allow access to reset password page
                 .requestMatchers(HttpMethod.POST, "/api/breeds").hasRole("ADMIN")
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 .requestMatchers("/api/shelter/**").hasAnyRole("SHELTER", "ADMIN")
